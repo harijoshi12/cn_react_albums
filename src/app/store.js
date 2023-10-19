@@ -1,7 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import albumReducer from '../features/albumSlice';
+import {setupListeners} from '@reduxjs/toolkit/query'
+import { albumApi } from '../features/apiSlice';
 export const store = configureStore({
   reducer: {
-    albums: albumReducer,
+    [albumApi.reducerPath]: albumApi.reducer,
   },
+  middleware: (getDefaultMiddleware)=>getDefaultMiddleware().concat(albumApi.middleware)
 });
+setupListeners(store.dispatch)

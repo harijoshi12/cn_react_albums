@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AlbumCard = ({album, handleAddOrUpdateAlbum, handleDeleteAlbum, title}) => {
+const AlbumCard = ({album, handleOpenModal, handleDeleteAlbum, title}) => {
   return (
     <div className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 p-4 rounded-lg shadow-xl flex flex-col justify-between h-full">
       <div>
@@ -9,10 +9,10 @@ const AlbumCard = ({album, handleAddOrUpdateAlbum, handleDeleteAlbum, title}) =>
       </div>
       <div className="flex justify-between mt-auto">
         <button
-          onClick={() => handleAddOrUpdateAlbum(album)}
+          onClick={() => handleOpenModal(album)}
           className="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-1 px-2 rounded"
         >
-          Update
+          Modify
         </button>
         <button
           onClick={() => handleDeleteAlbum(album.id)}

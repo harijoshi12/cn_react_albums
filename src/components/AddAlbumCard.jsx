@@ -1,9 +1,9 @@
 import React from 'react'
 
-const AddAlbumCard = ({handleAddOrUpdateAlbum}) => {
+const AddAlbumCard = ({handleOpenModal}) => {
   return (
     <div
-    onClick={() => handleAddOrUpdateAlbum()}
+    onClick={() => handleOpenModal()}
     className="cursor-pointer bg-gray-300 p-4 rounded shadow-lg hover:bg-gray-400 transition duration-300 ease-in-out flex flex-col justify-between h-full relative"
   >
      <div className="absolute inset-0 flex items-center justify-center">

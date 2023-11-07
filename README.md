@@ -29,6 +29,7 @@ This is a simple dummy App built with React(Vite) and Redux-toolkit(RTK Query). 
 - React
 - Redux Toolit
 - RTK Query
+- JSONPlacehoder for backend
 - Local Storage
 
 ## Installation
